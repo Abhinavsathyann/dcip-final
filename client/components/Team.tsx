@@ -146,6 +146,15 @@ const teamData: BatchData = {
       linkedin: "#",
       instagram: "#",
     },
+        {
+      id: 36,
+      name: "Abhinav K",
+      college: "KPTC",
+      course: "Computer Engineering",
+      photo: "Assets/images/Abhinav.jpg", 
+      linkedin: "#",
+      instagram: "#",
+    },
   ],
 };
 
