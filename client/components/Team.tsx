@@ -140,7 +140,7 @@ const teamData: BatchData = {
       {
       id: 36,
       name: "Devadathan P K",
-      college: "NA",
+      college: "University of Delhi ",
       course: "NA",
       photo: "Assets/images/Devadathan.jpg", 
       linkedin: "#",
