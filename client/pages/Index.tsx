@@ -8,7 +8,7 @@ import Team from "../components/Team";
 import Leadership from "../components/Leadership";
 import CitizenServices from "../components/CitizenServices";
 import TemporaryAccess from "../components/TemporaryAccess";
-
+import Testimonials from "../components/Testimonials";
 // Lazy load non-critical components
 const CollectorSection = lazy(() => import("../components/CollectorSection"));
 const HighlightsCarousel = lazy(() => import("../components/HighlightsCarousel"));
@@ -64,6 +64,7 @@ export default function Index() {
       <Timeline />
       <Team />
       <Leadership />
+      <Testimonials />
       <CitizenServices />
 
       <Suspense fallback={<SectionLoader />}>
