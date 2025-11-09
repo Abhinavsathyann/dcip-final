@@ -113,7 +113,7 @@ export default function CollectorSection() {
 
               <div className="flex flex-col gap-3">
                 <a
-                  href="mailto:coordinator@dcip.org"
+                  href="mailto:subc@dcip.org"
                   className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg hover:bg-secondary/10 transition-colors text-secondary font-medium"
                 >
                   <Mail size={18} />
@@ -129,6 +129,48 @@ export default function CollectorSection() {
               </div>
             </div>
           </div>
+             {/* District Collector Card */}
+          <div
+            className={`glass-effect p-8 rounded-2xl overflow-hidden transition-all duration-1000 hover:shadow-2xl hover:scale-105 border border-white/40 hover:border-primary/30 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
+          >
+            <div className="text-center">
+              <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden shadow-lg">
+                <img
+                  src="/Assets/images/vinodsir.jpg"
+                  alt="District Collector"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              <h3 className="text-2xl font-bold text-foreground mb-2">
+                District Collector
+              </h3>
+               <p className="text-primary font-semibold mb-1">
+                V R VINOD IAS
+              </p>
+              <p className="text-muted-foreground mb-4">Malappuram District</p>
+
+              <p className="text-foreground leading-relaxed mb-6 italic">
+                "The DCIP initiative represents our commitment to developing
+                skilled professionals who will drive economic growth and
+                innovation in our district. We are proud to support this
+                transformative program."
+              </p>
+
+              <div className="flex flex-col gap-3">
+                <a
+                  href="mailto:collector@malappuram.gov.in"
+                  className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg hover:bg-primary/10 transition-colors text-primary font-medium"
+                >
+                  <Mail size={18} />
+                  collector@malappuram.gov.in
+                </a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
