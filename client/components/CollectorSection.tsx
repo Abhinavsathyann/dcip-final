@@ -13,7 +13,7 @@ export default function CollectorSection() {
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.1 },
+      { threshold: 0.1 }
     );
 
     if (sectionRef.current) {
@@ -29,24 +29,26 @@ export default function CollectorSection() {
       ref={sectionRef}
       className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden"
     >
-      {/* Background decoration */}
+      {/* Background Decoration */}
       <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-bl from-primary/5 to-transparent rounded-full blur-3xl -z-10"></div>
 
       <div className="max-w-7xl mx-auto">
-        <h2 className="section-heading mb-12">Leadership & Coordination</h2>
+        <h2 className="section-heading mb-12 text-center">Leadership & Coordination</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* District Collector */}
+          {/* District Collector Card */}
           <div
             className={`glass-effect p-8 rounded-2xl overflow-hidden transition-all duration-1000 hover:shadow-2xl hover:scale-105 border border-white/40 hover:border-primary/30 ${
-              isVisible
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-10"
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
             <div className="text-center">
-              <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center shadow-lg">
-                <span className="text-white text-4xl font-bold">DC</span>
+              <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden shadow-lg">
+                <img
+                  src="/Assets/images/collector.jpg"
+                  alt="District Collector"
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               <h3 className="text-2xl font-bold text-foreground mb-2">
@@ -54,7 +56,7 @@ export default function CollectorSection() {
               </h3>
               <p className="text-muted-foreground mb-4">Malappuram District</p>
 
-              <p className="text-foreground leading-relaxed mb-6">
+              <p className="text-foreground leading-relaxed mb-6 italic">
                 "The DCIP initiative represents our commitment to developing
                 skilled professionals who will drive economic growth and
                 innovation in our district. We are proud to support this
@@ -73,18 +75,20 @@ export default function CollectorSection() {
             </div>
           </div>
 
-          {/* Program Coordinator */}
+          {/* Program Coordinator Card */}
           <div
             className={`glass-effect p-8 rounded-2xl overflow-hidden transition-all duration-1000 hover:shadow-2xl hover:scale-105 border border-white/40 hover:border-secondary/30 ${
-              isVisible
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-10"
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
             style={{ transitionDelay: isVisible ? "200ms" : "0ms" }}
           >
             <div className="text-center">
-              <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center shadow-lg">
-                <span className="text-white text-4xl font-bold">PC</span>
+              <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden shadow-lg">
+                <img
+                  src="/Assets/images/coordinator.jpg"
+                  alt="Program Coordinator"
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               <h3 className="text-2xl font-bold text-foreground mb-1">
@@ -97,7 +101,7 @@ export default function CollectorSection() {
                 Head, Digital Development Initiative
               </p>
 
-              <p className="text-foreground leading-relaxed mb-6">
+              <p className="text-foreground leading-relaxed mb-6 italic">
                 "Our goal is to bridge the gap between academic learning and
                 industry demands. Through DCIP, we provide hands-on training and
                 mentorship that prepare students for successful careers in
