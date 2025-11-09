@@ -78,7 +78,7 @@ export default function CollectorSection() {
             </div>
           </div>
 
-          {/* Program Coordinator Card */}
+          {/* Sub Collector Card */}
           <div
             className={`glass-effect p-8 rounded-2xl overflow-hidden transition-all duration-1000 hover:shadow-2xl hover:scale-105 border border-white/40 hover:border-secondary/30 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
@@ -88,20 +88,20 @@ export default function CollectorSection() {
             <div className="text-center">
               <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden shadow-lg">
                 <img
-                  src="/Assets/images/coordinator.jpg"
-                  alt="Program Coordinator"
+                  src="/Assets/images/dilipsir.jpg"
+                  alt="Sub Collector"
                   className="w-full h-full object-cover"
                 />
               </div>
 
               <h3 className="text-2xl font-bold text-foreground mb-1">
-                Program Coordinator
+                Sub Collector
               </h3>
               <p className="text-primary font-semibold mb-1">
-                Dr. Ramakrishnan V
+                DILIP K KAINIKKARA IAS
               </p>
               <p className="text-muted-foreground mb-6">
-                Head, Digital Development Initiative
+                 Tirur
               </p>
 
               <p className="text-foreground leading-relaxed mb-6 italic">
