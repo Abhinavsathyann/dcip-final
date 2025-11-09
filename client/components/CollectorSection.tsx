@@ -54,6 +54,9 @@ export default function CollectorSection() {
               <h3 className="text-2xl font-bold text-foreground mb-2">
                 District Collector
               </h3>
+               <p className="text-primary font-semibold mb-1">
+                VR VINOD IAS
+              </p>
               <p className="text-muted-foreground mb-4">Malappuram District</p>
 
               <p className="text-foreground leading-relaxed mb-6 italic">
