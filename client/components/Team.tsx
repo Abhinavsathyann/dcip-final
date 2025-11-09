@@ -124,7 +124,25 @@ const teamData: BatchData = {
       name: "Fathima Rana Foumi",
       college: "Chennai University",
       course: "Sociology",
-      photo: "/images/sneha-patel.jpg", // ✅ Example: stored in public/images/
+      photo: "Assets/images/RANA.jpg", // ✅ Example: stored in public/images/
+      linkedin: "#",
+      instagram: "#",
+    },
+    {
+      id: 36,
+      name: "Binisha M",
+      college: "NA",
+      course: "NA",
+      photo: "Assets/images/BINISHA .jpg", 
+      linkedin: "#",
+      instagram: "#",
+    },
+      {
+      id: 36,
+      name: "Devadathan P K",
+      college: "NA",
+      course: "NA",
+      photo: "Assets/images/Devadathan.jpg", 
       linkedin: "#",
       instagram: "#",
     },
