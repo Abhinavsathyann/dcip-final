@@ -87,7 +87,7 @@ const teamData: BatchData = {
       id: 32,
       name: "Afrah.jpg",
       college: "Lakshmibhai college ,University of Delhi ",
-      course: "B.Tech IT",
+      course: "B.com ",
       photo: "Assets/images/Afrah.jpg",
       linkedin: "#",
       instagram: "#",
