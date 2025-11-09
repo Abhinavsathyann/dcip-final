@@ -45,7 +45,7 @@ export default function CollectorSection() {
             <div className="text-center">
               <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden shadow-lg">
                 <img
-                  src="/Assets/images/collector.jpg"
+                  src="/Assets/images/vinodsir.jpg"
                   alt="District Collector"
                   className="w-full h-full object-cover"
                 />
