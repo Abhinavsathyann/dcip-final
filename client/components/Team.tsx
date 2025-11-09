@@ -20,10 +20,10 @@ const teamData: BatchData = {
   5: [
     {
       id: 25,
-      name: "Zara Khan",
-      college: "NIT Calicut",
-      course: "B.Tech CSE",
-      photo: "/images/zara-khan.jpg",
+      name: "Anusha K P",
+      college: "NA",
+      course: "MA Economics",
+      photo: "Assets/images/Anusha.jpg",
       linkedin: "#",
       instagram: "#",
     },
