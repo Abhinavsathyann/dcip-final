@@ -27,6 +27,15 @@ const teamData: BatchData = {
       linkedin: "#",
       instagram: "#",
     },
+     {
+      id: 25,
+      name: "Shiyas Ahammed",
+      college: "NA",
+      course: "B.tech artificial intelligence and data science",
+      photo: "Assets/images/Shiyas.jpg",
+      linkedin: "#",
+      instagram: "#",
+    },
 
   ],
   6: [
