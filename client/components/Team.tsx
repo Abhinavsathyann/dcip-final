@@ -85,7 +85,7 @@ const teamData: BatchData = {
     },
     {
       id: 32,
-      name: "Afrah.jpg",
+      name: "Afrah",
       college: "Lakshmibhai college ,University of Delhi ",
       course: "B.com ",
       photo: "Assets/images/Afrah.jpg",
@@ -94,10 +94,10 @@ const teamData: BatchData = {
     },
     {
       id: 33,
-      name: "Rohan Reddy",
-      college: "KMEA Engineering College",
-      course: "B.Tech CSE",
-      photo: "/images/rohan-reddy.jpg",
+      name: "Vishnupriya A",
+      college: "Gov.t Arts and science college Calicut",
+      course: "BA History",
+      photo: "Assets/images/VISHNUPRIYA.jpg",
       linkedin: "#",
       instagram: "#",
     },
