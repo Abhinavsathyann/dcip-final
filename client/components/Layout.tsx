@@ -323,7 +323,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
 
           <div className="border-t border-slate-700 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-400">
-            <p>&copy; 2024 DCIP Malappuram. All rights reserved.</p>
+            <p>&copy; 2025 DCIP Malappuram. All rights reserved.</p>
             <div className="flex gap-6">
               <motion.a
                 href="#"
