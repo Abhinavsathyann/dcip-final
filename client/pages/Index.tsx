@@ -64,7 +64,6 @@ export default function Index() {
       <Timeline />
       <Team />
       <Leadership />
-      <Testimonials />
       <CitizenServices />
 
       <Suspense fallback={<SectionLoader />}>
@@ -96,6 +95,7 @@ export default function Index() {
       </Suspense>
 
       <Suspense fallback={<SectionLoader />}>
+      <Testimonials />
         <Apply />
       </Suspense>
     </Layout>
