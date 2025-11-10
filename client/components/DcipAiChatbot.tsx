@@ -14,7 +14,7 @@ const DCIP_FAQ: Record<string, string> = {
   dcip:
     "DCIP (District Center for Innovation and Promotion) Malappuram is an initiative to nurture innovation, entrepreneurship, and technical creativity among students.",
   location:
-    "DCIP Malappuram is based at Kuttukaran Polytechnic College, Malappuram, Kerala.",
+    "DCIP Malappuram is based at Malappuram, Kerala.",
   program:
     "DCIP offers various programs like startup mentorship, innovation bootcamps, hackathons, workshops, and project incubation for aspiring entrepreneurs.",
   contact:
