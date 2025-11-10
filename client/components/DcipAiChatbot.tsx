@@ -11,6 +11,10 @@ interface Message {
 // 🧠 Enhanced DCIP Knowledge Base
 const DCIP_FAQ: Record<string, string> = {
   // --- General ---
+  Hi:
+  "Hello! I'm the DCIP AI Assistant. How can I help you today?",
+  Hello:
+  "Hi! I'm the DCIP AI Assistant. How can I help you today?",
   dcip:
     "DCIP (District Center for Innovation and Promotion) Malappuram is an initiative to nurture innovation, entrepreneurship, and technical creativity among students.",
   location:
