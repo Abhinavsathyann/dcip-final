@@ -105,8 +105,8 @@ const teamData: BatchData = {
     {
       id: 36,
       name: "Binisha M",
-      college: "NA",
-      course: "NA",
+      college: "Kerala Media Academy",
+      course: "PG diploma in Journalism and communication",
       photo: "Assets/images/BINISHA .jpg", 
       linkedin: "#",
       instagram: "#",
