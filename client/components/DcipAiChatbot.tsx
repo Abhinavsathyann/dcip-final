@@ -29,9 +29,9 @@ const DCIP_FAQ: Record<string, string> = {
     "Visit the official DCIP website: <a href='https://dcipmalappuram.vercel.app' target='_blank' class='underline text-blue-600'>dcipmalappuram.vercel.app</a>",
 
   // --- 💼 Internship Related ---
-   "Hi:":
+   "Hi ":
   "Hello! I'm the DCIP AI Assistant. How can I help you today?",
- " Hello: ":
+ " Hello ":
   "Hi! I'm the DCIP AI Assistant. How can I help you today?",
   "internship info":
     "The <b>District Collector Internship Program (DCIP)</b> provides students with real-world exposure to district-level governance, innovation, and administration. It's a flagship initiative by DCIP Malappuram.",
