@@ -9,6 +9,8 @@ import Leadership from "../components/Leadership";
 import CitizenServices from "../components/CitizenServices";
 import TemporaryAccess from "../components/TemporaryAccess";
 import Testimonials from "../components/Testimonials";
+import DcipAiChatbot from "../components/DcipAiChatbot";
+
 // Lazy load non-critical components
 const CollectorSection = lazy(() => import("../components/CollectorSection"));
 const HighlightsCarousel = lazy(() => import("../components/HighlightsCarousel"));
@@ -65,7 +67,7 @@ export default function Index() {
       <Team />
       <Leadership />
       <CitizenServices />
-
+      <DcipAiChatbot />
       <Suspense fallback={<SectionLoader />}>
         <CollectorSection />
       </Suspense>
