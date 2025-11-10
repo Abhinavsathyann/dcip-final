@@ -10,23 +10,28 @@ interface Message {
 
 // 🧠 Built-in DCIP Q&A Knowledge Base
 const DCIP_FAQ: Record<string, string> = {
-  "what is dcip":
-    "DCIP (District Center for Innovation and Promotion) Malappuram is an initiative to nurture innovation, entrepreneurship, and technical creativity among students.",
-  "where is dcip located":
-    "DCIP Malappuram is based at Kuttukaran Polytechnic College, Malappuram, Kerala.",
-  "what are dcip programs":
-    "DCIP offers various programs like startup mentorship, innovation bootcamps, hackathons, workshops, and project incubation for aspiring entrepreneurs.",
-  "how to contact dcip":
-    "You can contact DCIP through the official website’s contact page or visit the Innovation Cell at Kuttukaran Polytechnic College.",
-  "who can join dcip":
-    "Any student or innovator with an idea or interest in technology, entrepreneurship, or innovation can join DCIP’s activities.",
-  "what events are happening":
-    "DCIP regularly conducts workshops, startup mentoring sessions, innovation challenges, and exhibitions. Check the Events page for current updates.",
-  "dcip website":
-    "Visit the official DCIP website: [https://dcipmalappuram.vercel.app](https://dcipmalappuram.vercel.app)",
-  "about kuttukaran polytechnic college":
-    "Kuttukaran Polytechnic College, located in Malappuram, is an AICTE-approved institution fostering technical education and innovation through initiatives like DCIP.",
-  "thank you": "You're welcome! 😊 Feel free to ask anything else about DCIP.",
+    "what is the district collector internship program":
+    "The <b>District Collector Internship Program (DCIP)</b> is an experiential learning initiative that allows students to work directly with the District Collector’s office. It helps them understand government systems, public administration, and innovative governance models.",
+  "who can apply for the district collector internship":
+    "The program is open to students from recognized institutions in Malappuram district who are passionate about administration, innovation, and social impact.",
+  "how to apply for the district collector internship":
+    "You can apply through the official DCIP Malappuram website by filling out the Internship Registration form under the 'Internship' section. Announcements are also posted on the DCIP social media pages.",
+  "what are the eligibility criteria for internship":
+    "Applicants must be currently enrolled students (Polytechnic, UG, or PG) with interest in innovation, public administration, or community development. Basic communication and project skills are preferred.",
+  "what do interns learn in the district collector internship":
+    "Interns get hands-on experience in public project management, innovation proposal drafting, event coordination, and government process understanding. They also interact with officials and contribute to real administrative initiatives.",
+  "what is the duration of the internship":
+    "The typical duration of the District Collector Internship Program is <b>4 to 6 weeks</b>, depending on project type and department involvement.",
+  "is this a paid internship":
+    "No, the District Collector Internship Program is a <b>non-paid</b> experiential learning opportunity. However, participants receive official certificates and exposure to district-level administrative work.",
+  "do interns receive a certificate":
+    "✅ Yes! All participants who successfully complete their internship and assigned projects receive an official <b>Certificate of Completion</b> from the District Collector’s office and DCIP Malappuram.",
+  "where can i check internship updates":
+    "You can check all updates, announcements, and selection lists under the <b>Internship</b> or <b>News & Updates</b> section on the DCIP website.",
+  "internship contact":
+    "For any queries related to the District Collector Internship Program, please contact the DCIP Coordination Team through the website’s Contact form or via email mentioned in the announcement notice.",
+  "thank you":
+    "You're welcome! 😊 Feel free to ask me more about the DCIP Internship or upcoming events!",
 };
 
 // 🌍 System Context for the AI model
