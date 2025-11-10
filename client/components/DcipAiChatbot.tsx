@@ -8,49 +8,83 @@ interface Message {
   time: string;
 }
 
-// 🧠 Built-in DCIP Q&A Knowledge Base
+// 🧠 Enhanced DCIP Knowledge Base
 const DCIP_FAQ: Record<string, string> = {
-    "what is the district collector internship program":
-    "The <b>District Collector Internship Program (DCIP)</b> is an experiential learning initiative that allows students to work directly with the District Collector’s office. It helps them understand government systems, public administration, and innovative governance models.",
-  "who can apply for the district collector internship":
-    "The program is open to students from recognized institutions in Malappuram district who are passionate about administration, innovation, and social impact.",
-  "how to apply for the district collector internship":
-    "You can apply through the official DCIP Malappuram website by filling out the Internship Registration form under the 'Internship' section. Announcements are also posted on the DCIP social media pages.",
-  "what are the eligibility criteria for internship":
-    "Applicants must be currently enrolled students (Polytechnic, UG, or PG) with interest in innovation, public administration, or community development. Basic communication and project skills are preferred.",
-  "what do interns learn in the district collector internship":
-    "Interns get hands-on experience in public project management, innovation proposal drafting, event coordination, and government process understanding. They also interact with officials and contribute to real administrative initiatives.",
-  "what is the duration of the internship":
-    "The typical duration of the District Collector Internship Program is <b>4 to 6 weeks</b>, depending on project type and department involvement.",
-  "is this a paid internship":
-    "No, the District Collector Internship Program is a <b>non-paid</b> experiential learning opportunity. However, participants receive official certificates and exposure to district-level administrative work.",
-  "do interns receive a certificate":
-    "✅ Yes! All participants who successfully complete their internship and assigned projects receive an official <b>Certificate of Completion</b> from the District Collector’s office and DCIP Malappuram.",
-  "where can i check internship updates":
-    "You can check all updates, announcements, and selection lists under the <b>Internship</b> or <b>News & Updates</b> section on the DCIP website.",
+  // --- General ---
+  dcip:
+    "DCIP (District Center for Innovation and Promotion) Malappuram is an initiative to nurture innovation, entrepreneurship, and technical creativity among students.",
+  location:
+    "DCIP Malappuram is based at Kuttukaran Polytechnic College, Malappuram, Kerala.",
+  program:
+    "DCIP offers various programs like startup mentorship, innovation bootcamps, hackathons, workshops, and project incubation for aspiring entrepreneurs.",
+  contact:
+    "You can reach DCIP through the official website’s contact form or visit the Innovation Cell at Kuttukaran Polytechnic College.",
+  join:
+    "Any student or innovator interested in innovation, entrepreneurship, or social impact can join DCIP by participating in events or applying for internships.",
+  website:
+    "Visit the official DCIP website: <a href='https://dcipmalappuram.vercel.app' target='_blank' class='underline text-blue-600'>dcipmalappuram.vercel.app</a>",
+
+  // --- 💼 Internship Related ---
+  "internship info":
+    "The <b>District Collector Internship Program (DCIP)</b> provides students with real-world exposure to district-level governance, innovation, and administration. It's a flagship initiative by DCIP Malappuram.",
+  "internship apply":
+    "You can apply through the DCIP Malappuram website — check the Internship section or upcoming announcements. Usually, an online application form is provided.",
+  "internship who":
+    "Students from colleges in Malappuram district who are interested in innovation, administration, or technology can apply for the DCIP internship.",
+  "internship eligibility":
+    "Eligible candidates are students currently enrolled in Diploma, UG, or PG programs with an interest in innovation, governance, or social impact.",
+  "internship duration":
+    "The District Collector Internship Program typically lasts <b>4–6 weeks</b>, depending on the assigned project or department.",
+  "internship certificate":
+    "✅ Yes! All participants who successfully complete the internship receive an official <b>Certificate of Completion</b> from the District Collector’s office and DCIP Malappuram.",
+  "internship paid":
+    "No, the internship is <b>non-paid</b>, but it offers valuable experience, mentorship, and official recognition from the District Collector’s office.",
+  "internship learn":
+    "Interns gain practical knowledge in public project coordination, innovation proposal development, data analysis, and administration activities.",
+  "internship updates":
+    "Stay updated by visiting the DCIP website’s Internship or News & Events section, or follow official DCIP social media pages for announcements.",
   "internship contact":
-    "For any queries related to the District Collector Internship Program, please contact the DCIP Coordination Team through the website’s Contact form or via email mentioned in the announcement notice.",
-  "thank you":
-    "You're welcome! 😊 Feel free to ask me more about the DCIP Internship or upcoming events!",
+    "For queries, contact the DCIP Coordination Team through the website’s Contact page or official email mentioned in internship notices.",
 };
 
-// 🌍 System Context for the AI model
+// 💡 Keyword groups for smart matching (handles grammar variations & synonyms)
+const KEYWORD_GROUPS: Record<string, string[]> = {
+  "internship info": ["what is internship", "about internship", "tell me internship", "internship details", "collector internship"],
+  "internship apply": ["how to apply", "apply internship", "join internship", "registration", "apply for internship"],
+  "internship who": ["who can apply", "eligible students", "who can join", "who allowed"],
+  "internship eligibility": ["eligibility", "criteria", "requirements"],
+  "internship duration": ["duration", "time period", "how long", "weeks"],
+  "internship certificate": ["certificate", "completion", "proof", "do i get certificate"],
+  "internship paid": ["paid", "stipend", "salary", "free internship"],
+  "internship learn": ["what will i learn", "skills", "experience", "benefits"],
+  "internship updates": ["updates", "latest news", "current internship", "ongoing internship"],
+  "internship contact": ["contact", "email", "who to contact"],
+  "dcip": ["what is dcip", "about dcip", "dcip full form"],
+  "program": ["programs", "activities", "events", "initiatives"],
+  "location": ["where is dcip", "location", "address"],
+  "contact": ["reach", "email", "phone"],
+  "join": ["join", "be part", "participate"],
+  "website": ["official site", "portal", "link"],
+};
+
+// --- DCIP Context for AI fallback ---
 const DCIP_CONTEXT = `
 You are the official AI Assistant for DCIP Malappuram, Kerala.
-Your purpose is to help students and innovators with details about DCIP programs, events, startup incubation, and contact info.
-If the question matches built-in FAQ, use it. Otherwise, generate a professional, friendly response.
+Your role is to assist students, innovators, and mentors with information about DCIP programs, the District Collector Internship, and related activities.
+If the user asks a question similar to an FAQ, use that answer directly.
+Otherwise, generate a helpful and professional reply based on DCIP’s mission and programs.
 `;
 
 const DcipAiChatbotAdvanced: React.FC = () => {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>(() => {
-    const saved = localStorage.getItem("dcip-ai-chat-v3");
+    const saved = localStorage.getItem("dcip-ai-smart");
     return saved
       ? JSON.parse(saved)
       : [
           {
             sender: "bot",
-            text: "👋 Hey there! I’m the DCIP AI Assistant. Ask me about programs, events, or how to join!",
+            text: "👋 Hey there! I'm the DCIP AI Assistant. Ask me about the District Collector Internship or DCIP programs!",
             time: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
           },
         ];
@@ -59,26 +93,32 @@ const DcipAiChatbotAdvanced: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const chatEndRef = useRef<HTMLDivElement>(null);
 
-  // Save chat history
   useEffect(() => {
-    localStorage.setItem("dcip-ai-chat-v3", JSON.stringify(messages));
+    localStorage.setItem("dcip-ai-smart", JSON.stringify(messages));
   }, [messages]);
 
-  // Scroll to latest message
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, loading]);
 
-  // Check for built-in FAQ
-  const getBuiltInAnswer = (text: string): string | null => {
-    const normalized = text.toLowerCase().trim();
-    const key = Object.keys(DCIP_FAQ).find((q) =>
-      normalized.includes(q)
+  // ✅ Smart Question Matching
+  const findSmartMatch = (text: string): string | null => {
+    const lower = text.toLowerCase();
+    // Check for direct match
+    const directKey = Object.keys(DCIP_FAQ).find((key) =>
+      lower.includes(key)
     );
-    return key ? DCIP_FAQ[key] : null;
+    if (directKey) return DCIP_FAQ[directKey];
+
+    // Check by group keywords
+    for (const [faqKey, keywords] of Object.entries(KEYWORD_GROUPS)) {
+      if (keywords.some((k) => lower.includes(k))) {
+        return DCIP_FAQ[faqKey];
+      }
+    }
+    return null;
   };
 
-  // Handle send
   const handleSend = async () => {
     if (!input.trim() || loading) return;
 
@@ -92,14 +132,14 @@ const DcipAiChatbotAdvanced: React.FC = () => {
     setInput("");
     setLoading(true);
 
-    const builtIn = getBuiltInAnswer(input);
-    if (builtIn) {
+    const smartAnswer = findSmartMatch(input);
+    if (smartAnswer) {
       setTimeout(() => {
         setMessages((prev) => [
           ...prev,
           {
             sender: "bot",
-            text: builtIn,
+            text: smartAnswer,
             time: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
           },
         ]);
@@ -110,18 +150,20 @@ const DcipAiChatbotAdvanced: React.FC = () => {
 
     try {
       const reply = await getAiReply([...messages, userMsg]);
-      const botMsg: Message = {
-        sender: "bot",
-        text: reply,
-        time: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
-      };
-      setMessages((prev) => [...prev, botMsg]);
+      setMessages((prev) => [
+        ...prev,
+        {
+          sender: "bot",
+          text: reply,
+          time: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
+        },
+      ]);
     } catch {
       setMessages((prev) => [
         ...prev,
         {
           sender: "bot",
-          text: "⚠️ Sorry, I couldn't connect to DCIP's AI right now. Please try again later.",
+          text: "⚠️ Sorry, I couldn't connect to DCIP AI right now. Please try again later.",
           time: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
         },
       ]);
@@ -130,11 +172,10 @@ const DcipAiChatbotAdvanced: React.FC = () => {
     }
   };
 
-  // Fetch AI Response
   const getAiReply = async (chatHistory: Message[]): Promise<string> => {
-    const formattedMessages = chatHistory.slice(-6).map((msg) => ({
-      role: msg.sender === "user" ? "user" : "assistant",
-      content: msg.text,
+    const formatted = chatHistory.slice(-6).map((m) => ({
+      role: m.sender === "user" ? "user" : "assistant",
+      content: m.text,
     }));
 
     const res = await fetch("https://api.openai.com/v1/chat/completions", {
@@ -145,24 +186,23 @@ const DcipAiChatbotAdvanced: React.FC = () => {
       },
       body: JSON.stringify({
         model: "gpt-4o-mini",
-        temperature: 0.8,
         messages: [
           { role: "system", content: DCIP_CONTEXT },
-          ...formattedMessages,
+          ...formatted,
         ],
+        temperature: 0.8,
       }),
     });
 
     const data = await res.json();
     return (
       data.choices?.[0]?.message?.content?.trim() ||
-      "I'm not sure about that, but you can explore more on the DCIP website!"
+      "I'm not sure about that — please check the DCIP website for updates!"
     );
   };
 
   return (
     <>
-      {/* Floating Chat Button */}
       <motion.button
         onClick={() => setOpen(!open)}
         whileHover={{ scale: 1.1 }}
@@ -172,7 +212,6 @@ const DcipAiChatbotAdvanced: React.FC = () => {
         {open ? <X /> : <MessageCircle />}
       </motion.button>
 
-      {/* Chat Window */}
       <AnimatePresence>
         {open && (
           <motion.div
@@ -182,15 +221,13 @@ const DcipAiChatbotAdvanced: React.FC = () => {
             transition={{ duration: 0.25 }}
             className="fixed bottom-20 right-6 w-80 md:w-96 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-2xl shadow-2xl flex flex-col z-50 overflow-hidden"
           >
-            {/* Header */}
             <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white p-4 flex justify-between items-center font-semibold">
-              <span>🤖 DCIP AI Assistant</span>
+              <span>🤖 DCIP Smart Assistant</span>
               <button onClick={() => setOpen(false)}>
                 <X className="w-5 h-5" />
               </button>
             </div>
 
-            {/* Messages */}
             <div className="flex-1 p-4 overflow-y-auto max-h-96 scrollbar-thin scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-700">
               {messages.map((msg, i) => (
                 <motion.div
@@ -198,9 +235,7 @@ const DcipAiChatbotAdvanced: React.FC = () => {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.2 }}
-                  className={`mb-3 ${
-                    msg.sender === "user" ? "text-right" : "text-left"
-                  }`}
+                  className={`mb-3 ${msg.sender === "user" ? "text-right" : "text-left"}`}
                 >
                   <div
                     className={`inline-block px-3 py-2 rounded-2xl text-sm shadow-sm ${
@@ -210,34 +245,25 @@ const DcipAiChatbotAdvanced: React.FC = () => {
                     }`}
                     dangerouslySetInnerHTML={{ __html: msg.text }}
                   />
-                  <div className="text-xs mt-1 opacity-60">
-                    {msg.time}
-                  </div>
+                  <div className="text-xs mt-1 opacity-60">{msg.time}</div>
                 </motion.div>
               ))}
-
               {loading && (
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  className="flex items-center text-sm text-gray-500 dark:text-gray-400 italic"
-                >
+                <div className="flex items-center text-sm text-gray-500 italic">
                   <Loader2 className="w-4 h-4 mr-2 animate-spin" /> DCIP Assistant is typing...
-                </motion.div>
+                </div>
               )}
-
               <div ref={chatEndRef} />
             </div>
 
-            {/* Input */}
-            <div className="p-3 border-t border-gray-200 dark:border-gray-700 flex items-center bg-gray-50 dark:bg-gray-900">
+            <div className="p-3 border-t border-gray-200 flex items-center bg-gray-50 dark:bg-gray-900">
               <input
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && handleSend()}
-                placeholder="Ask something about DCIP..."
-                className="flex-1 px-3 py-2 text-sm rounded-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 outline-none text-gray-800 dark:text-gray-100"
+                placeholder="Ask about DCIP or Internship..."
+                className="flex-1 px-3 py-2 text-sm rounded-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 outline-none"
               />
               <motion.button
                 whileTap={{ scale: 0.9 }}
