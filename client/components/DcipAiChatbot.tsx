@@ -16,13 +16,13 @@ const DCIP_FAQ: Record<string, string> = {
   Hello:  
   "Hi! I'm the DCIP AI Assistant. How can I help you today?",
   dcip:
-    "DCIP (District Center for Innovation and Promotion) Malappuram is an initiative to nurture innovation, entrepreneurship, and technical creativity among students.",
+    "The District Collector Internship Program (DCIP) is a government-backed experiential learning program designed to expose students to the functioning of district administration under the guidance of the District CollectorInterns work on real administrative tasks, policy implementation, data analysis, and public service delivery projects..",
   location:
-    "DCIP Malappuram is based at Malappuram, Kerala.",
+    "DCIP Malappuram civil station,malappuram,kerala.",
   program:
     "DCIP offers various programs like startup mentorship, innovation bootcamps, hackathons, workshops, and project incubation for aspiring entrepreneurs.",
   contact:
-    "You can reach DCIP through the official website’s contact form or visit the Innovation Cell at Kuttukaran Polytechnic College.",
+    "You can reach DCIP through the official website’s contact form or visit the Innova.",
   join:
     "Any student or innovator interested in innovation, entrepreneurship, or social impact can join DCIP by participating in events or applying for internships.",
   website:
