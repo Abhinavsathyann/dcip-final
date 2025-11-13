@@ -21,7 +21,7 @@ const teamData: BatchData = {
     {
       id: 25,
       name: "Anusha K P",
-      college: "NA",
+      college: "St. Joseph's College Devagiri , Calicut",
       course: "MA Economics",
       photo: "Assets/images/Anusha.jpg",
       linkedin: "#",
@@ -30,7 +30,7 @@ const teamData: BatchData = {
      {
       id: 26,
       name: "Shiyas Ahammed",
-      college: "NA",
+      college: "M.E.S College of Engineering,",
       course: "B.tech artificial intelligence and data science",
       photo: "Assets/images/Shiyas.jpg",
       linkedin: "#",
@@ -39,7 +39,7 @@ const teamData: BatchData = {
       {
       id: 27,
       name: "Muhammed Nisar K",
-      college: "NA",
+      college: "Thunchath Ezhuthachan Malayalam University",
       course: "MA. Journalism and Mass Communication",
       photo: "Assets/images/Nisar.jpg",
       linkedin: "#",
