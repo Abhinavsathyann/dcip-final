@@ -8,7 +8,6 @@ import {
   Users,
   TrendingUp,
   CheckCircle,
-  Bell,
 } from "lucide-react";
 
 interface Service {
@@ -124,22 +123,18 @@ export default function CitizenServices() {
       ref={sectionRef}
       className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-blue-50 to-white relative overflow-hidden"
     >
-      {/* Background elements */}
+      {/* Background Effects */}
       <motion.div
         className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-primary/12 to-transparent rounded-full blur-3xl -z-10"
         animate={{ y: [0, 30, 0], x: [0, 20, 0] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-      ></motion.div>
+      />
+
       <motion.div
         className="absolute -bottom-40 left-0 w-96 h-96 bg-gradient-to-tr from-secondary/12 to-transparent rounded-full blur-3xl -z-10"
         animate={{ y: [0, -30, 0], x: [0, -20, 0] }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 1,
-        }}
-      ></motion.div>
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+      />
 
       <div className="max-w-7xl mx-auto">
         <motion.div
@@ -151,8 +146,7 @@ export default function CitizenServices() {
           <motion.div variants={itemVariants} className="text-center mb-16">
             <h2 className="section-heading mb-4">Citizen Services & Support</h2>
             <p className="section-subheading text-muted-foreground">
-              Comprehensive tools and resources to support your DCIP journey and
-              engagement
+              Comprehensive tools and resources to support your DCIP journey and engagement
             </p>
             <div className="h-1 w-24 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mt-6"></div>
           </motion.div>
@@ -162,7 +156,7 @@ export default function CitizenServices() {
             variants={containerVariants}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
           >
-            {servicesData.map((service, index) => (
+            {servicesData.map((service) => (
               <motion.div
                 key={service.id}
                 variants={itemVariants}
@@ -172,17 +166,16 @@ export default function CitizenServices() {
                 transition={{ type: "spring", stiffness: 300 }}
                 className="group relative overflow-hidden rounded-3xl bg-white shadow-lg hover:shadow-2xl border border-gray-100 transition-all duration-300 cursor-pointer"
               >
-                {/* Top gradient accent */}
+                {/* Top Border Accent */}
                 <motion.div
                   className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${service.color}`}
                   initial={{ scaleX: 0 }}
                   whileHover={{ scaleX: 1 }}
                   transition={{ duration: 0.3 }}
-                ></motion.div>
+                />
 
-                {/* Card content */}
+                {/* Card Content */}
                 <div className="relative z-10 p-8">
-                  {/* Icon */}
                   <motion.div
                     className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} flex items-center justify-center text-white mb-5 shadow-lg`}
                     animate={{
@@ -194,15 +187,11 @@ export default function CitizenServices() {
                     {service.icon}
                   </motion.div>
 
-                  {/* Title */}
-                  <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:bg-clip-text transition-all duration-300">
+                  <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:bg-clip-text transition-all">
                     {service.title}
                   </h3>
 
-                  {/* Description */}
-                  <p className="text-muted-foreground leading-relaxed mb-5">
-                    {service.description}
-                  </p>
+                  <p className="text-muted-foreground mb-5">{service.description}</p>
 
                   {/* Features */}
                   <motion.div
@@ -224,17 +213,14 @@ export default function CitizenServices() {
                           transition={{ delay: idx * 0.1 }}
                           className="flex items-center gap-2 text-sm text-muted-foreground"
                         >
-                          <CheckCircle
-                            size={16}
-                            className={`text-primary flex-shrink-0`}
-                          />
+                          <CheckCircle size={16} className="text-primary" />
                           <span>{feature}</span>
                         </motion.div>
                       ))}
                     </div>
                   </motion.div>
 
-                  {/* Action button */}
+                  {/* Button */}
                   <motion.button
                     className={`w-full px-4 py-3 rounded-xl font-bold bg-gradient-to-r ${service.color} text-white hover:shadow-lg transition-all`}
                     whileHover={{ scale: 1.02 }}
@@ -244,54 +230,15 @@ export default function CitizenServices() {
                   </motion.button>
                 </div>
 
-                {/* Decorative element */}
+                {/* Background Circle */}
                 <div
-                  className={`absolute -bottom-12 -right-12 w-40 h-40 rounded-full bg-gradient-to-tl ${service.color} opacity-10 group-hover:opacity-20 transition-opacity duration-300`}
-                ></div>
+                  className={`absolute -bottom-12 -right-12 w-40 h-40 rounded-full bg-gradient-to-tl ${service.color} opacity-10 group-hover:opacity-20 transition-opacity`}
+                />
               </motion.div>
             ))}
           </motion.div>
 
-          {/* Quick Stats Banner */}
-          <motion.div
-            variants={itemVariants}
-            className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-primary/10 via-accent/10 to-secondary/10 border border-primary/20 p-8 md:p-12"
-          >
-            <div className="relative z-10">
-              <div className="flex items-center gap-3 mb-6">
-                <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-                >
-                  <Bell className="text-primary" size={28} />
-                </motion.div>
-                <h3 className="text-2xl font-bold text-foreground">
-                  Stay Connected & Informed
-                </h3>
-              </div>
-
-              <p className="text-muted-foreground mb-6 max-w-2xl">
-                Subscribe to our notifications to receive updates about new
-                opportunities, events, announcements, and important deadlines.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-4">
-                <motion.input
-                  type="email"
-                  placeholder="Enter your email address"
-                  className="flex-1 px-6 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary transition-all"
-                  whileFocus={{ scale: 1.02 }}
-                />
-                <motion.button
-                  className="btn-glow px-8 py-3 font-bold whitespace-nowrap"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Subscribe
-                </motion.button>
-              </div>
-            </div>
-          </motion.div>
+          {/* 🚫 SUBSCRIBE SECTION REMOVED COMPLETELY */}
         </motion.div>
       </div>
     </section>

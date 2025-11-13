@@ -5,7 +5,7 @@ import Hero from "../components/Hero";
 import About from "../components/About";
 import Timeline from "../components/Timeline";
 import Team from "../components/Team";
-import Leadership from "../components/Leadership";
+// import Leadership from "../components/Leadership";
 import CitizenServices from "../components/CitizenServices";
 import TemporaryAccess from "../components/TemporaryAccess";
 import Testimonials from "../components/Testimonials";
@@ -16,9 +16,9 @@ const CollectorSection = lazy(() => import("../components/CollectorSection"));
 const HighlightsCarousel = lazy(() => import("../components/HighlightsCarousel"));
 const Projects = lazy(() => import("../components/Projects"));
 const Gallery = lazy(() => import("../components/Gallery"));
-const Notifications = lazy(() => import("../components/Notifications"));
+// const Notifications = lazy(() => import("../components/Notifications"));
 const Faq = lazy(() => import("../components/Faq"));
-const News = lazy(() => import("../components/News"));
+// const News = lazy(() => import("../components/News"));
 const Apply = lazy(() => import("../components/Apply"));
 
 const SectionLoader = () => (
@@ -65,7 +65,7 @@ export default function Index() {
       <About />
       <Timeline />
       <Team />
-      <Leadership />
+      {/* <Leadership /> */}
       <CitizenServices />
       <DcipAiChatbot />
       <Suspense fallback={<SectionLoader />}>
@@ -84,17 +84,17 @@ export default function Index() {
         <Gallery />
       </Suspense>
 
-      <Suspense fallback={<SectionLoader />}>
+      {/* <Suspense fallback={<SectionLoader />}>
         <Notifications />
-      </Suspense>
+      </Suspense> */}
 
       <Suspense fallback={<SectionLoader />}>
         <Faq />
       </Suspense>
 
-      <Suspense fallback={<SectionLoader />}>
+      {/* <Suspense fallback={<SectionLoader />}>
         <News />
-      </Suspense>
+      </Suspense> */}
 
       <Suspense fallback={<SectionLoader />}>
       <Testimonials />
