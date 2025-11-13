@@ -30,7 +30,7 @@ const teamData: BatchData = {
      {
       id: 26,
       name: "Shiyas Ahammed",
-      college: "M.E.S College of Engineering,",
+      college: "M.E.S College of Engineering",
       course: "B.tech artificial intelligence and data science",
       photo: "Assets/images/Shiyas.jpg",
       linkedin: "#",
