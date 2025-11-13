@@ -24,10 +24,7 @@ export default function About() {
       { threshold: 0.1 },
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
+    if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
   }, []);
 
@@ -35,9 +32,7 @@ export default function About() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-      },
+      transition: { staggerChildren: 0.15 },
     },
   };
 
@@ -86,8 +81,7 @@ export default function About() {
     {
       icon: <Award size={32} />,
       title: "Career Growth",
-      description:
-        "Get recognized certificates.",
+      description: "Get recognized certificates.",
       color: "from-orange-500 to-orange-600",
       bgColor: "bg-orange-50",
     },
@@ -107,17 +101,17 @@ export default function About() {
       ref={sectionRef}
       className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden"
     >
-      {/* Background decorative elements */}
+      {/* Background Effects */}
       <motion.div
         className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-primary/8 to-transparent rounded-full blur-3xl -z-10"
         animate={{ y: [0, 30, 0], x: [0, 20, 0] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-      ></motion.div>
+      />
       <motion.div
         className="absolute -bottom-40 left-0 w-96 h-96 bg-gradient-to-tr from-secondary/8 to-transparent rounded-full blur-3xl -z-10"
         animate={{ y: [0, -30, 0], x: [0, -20, 0] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-      ></motion.div>
+      />
 
       <div className="max-w-7xl mx-auto">
         <motion.div
@@ -149,10 +143,7 @@ export default function About() {
                   The District Collector Internship Program (DCIP) is a
                   groundbreaking government initiative designed to provide
                   students with real-time, hands-on exposure to public
-                  administration and governance at the district level. We
-                  believe that experiential learning combined with practical
-                  exposure creates informed, responsible, and innovative
-                  citizens.
+                  administration and governance at the district level.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <motion.button
@@ -172,14 +163,10 @@ export default function About() {
                 </div>
               </div>
 
-              {/* Illustration placeholder with gradient */}
+              {/* Illustration */}
               <motion.div
                 animate={{ y: [0, 20, 0] }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                 className="relative h-64 md:h-80 rounded-2xl bg-gradient-to-br from-primary/20 via-accent/20 to-secondary/20 flex items-center justify-center overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 opacity-50"></div>
@@ -190,86 +177,20 @@ export default function About() {
             </div>
           </motion.div>
 
-          {/* Mission and Vision Cards */}
+          {/* ========================================================= */}
+          {/* ===== TEMPORARILY REMOVED: MISSION & VISION SECTION ===== */}
+          {/* ========================================================= */}
+
+          {/*
           <motion.div
             variants={containerVariants}
             className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16"
           >
-            {/* Mission Card */}
-            <motion.div
-              variants={itemVariants}
-              whileHover={{ scale: 1.05, y: -5 }}
-              transition={{ type: "spring", stiffness: 300 }}
-              className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-600 to-blue-700 p-8 md:p-10 text-white shadow-xl hover:shadow-2xl"
-            >
-              {/* Background animation */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-              <motion.div
-                animate={{ rotate: [0, 5, -5, 0] }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                className="mb-6 w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center relative z-10"
-              >
-                <Rocket size={32} className="text-white" />
-              </motion.div>
-
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 relative z-10">
-                Our Mission
-              </h3>
-              <p className="text-blue-100 leading-relaxed text-lg relative z-10">
-                To empower youth through experiential learning in governance,
-                fostering leadership, civic responsibility, and innovation by
-                engaging students directly in the district administration's
-                developmental and public service activities.
-              </p>
-
-              {/* Decorative elements */}
-              <div className="absolute bottom-0 right-0 w-40 h-40 bg-white/10 rounded-full blur-2xl -z-0"></div>
-            </motion.div>
-
-            {/* Vision Card */}
-            <motion.div
-              variants={itemVariants}
-              whileHover={{ scale: 1.05, y: -5 }}
-              transition={{ type: "spring", stiffness: 300 }}
-              className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-purple-600 to-purple-700 p-8 md:p-10 text-white shadow-xl hover:shadow-2xl"
-            >
-              {/* Background animation */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-              <motion.div
-                animate={{ rotate: [0, -5, 5, 0] }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 0.5,
-                }}
-                className="mb-6 w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center relative z-10"
-              >
-                <Target size={32} className="text-white" />
-              </motion.div>
-
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 relative z-10">
-                Our Vision
-              </h3>
-              <p className="text-purple-100 leading-relaxed text-lg relative z-10">
-                To build a generation of socially responsible, informed, and
-                proactive citizens who understand the value of public service
-                and are inspired to lead change within their communities through
-                transparent, efficient, and people-centered governance.
-              </p>
-
-              {/* Decorative elements */}
-              <div className="absolute top-0 left-0 w-40 h-40 bg-white/10 rounded-full blur-2xl -z-0"></div>
-            </motion.div>
+            Mission + Vision original section here…
           </motion.div>
+          */}
 
-          {/* Key Features Grid */}
+          {/* Key Features */}
           <motion.div variants={itemVariants} className="mb-12">
             <h3 className="text-2xl md:text-3xl font-bold text-center mb-4 text-foreground">
               Why Choose DCIP?
@@ -291,19 +212,15 @@ export default function About() {
                   transition={{ type: "spring", stiffness: 300 }}
                   className={`group relative overflow-hidden rounded-2xl ${feature.bgColor} p-8 border border-gray-200 hover:border-primary/30 shadow-md hover:shadow-xl transition-all duration-300`}
                 >
-                  {/* Animated background gradient */}
                   <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-                  {/* Icon */}
                   <motion.div
-                    className={`w-14 h-14 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center text-white mb-4 shadow-lg group-hover:shadow-xl relative z-10`}
+                    className={`w-14 h-14 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center text-white mb-4 shadow-lg relative z-10`}
                     whileHover={{ rotate: 10, scale: 1.1 }}
-                    transition={{ type: "spring", stiffness: 300 }}
                   >
                     {feature.icon}
                   </motion.div>
 
-                  {/* Content */}
                   <h4 className="text-xl font-bold text-foreground mb-3 relative z-10">
                     {feature.title}
                   </h4>
@@ -311,13 +228,12 @@ export default function About() {
                     {feature.description}
                   </p>
 
-                  {/* Bottom accent line */}
                   <motion.div
                     className={`absolute bottom-0 left-0 h-1 bg-gradient-to-r ${feature.color}`}
                     initial={{ width: 0 }}
                     whileHover={{ width: "100%" }}
                     transition={{ duration: 0.3 }}
-                  ></motion.div>
+                  />
                 </motion.div>
               ))}
             </motion.div>
@@ -363,6 +279,7 @@ export default function About() {
               ))}
             </div>
           </motion.div>
+
         </motion.div>
       </div>
     </section>
