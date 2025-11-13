@@ -59,11 +59,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               transition={{ type: "spring", stiffness: 400 }}
             >
               <motion.div
-                className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center"
-                whileHover={{ rotate: 5 }}
-                transition={{ type: "spring", stiffness: 300 }}
+                className="w-10 h-10  from-primary to-secondary rounded-lg flex items-center justify-center"
+  whileHover={{ rotate: 5 }}
+  transition={{ type: "spring", stiffness: 300 }}
               >
-                <span className="text-white font-bold text-lg">D</span>
+               <img
+    src="/Assets/images/dciplogo.png"
+    alt="DCIP Logo"
+    className="w-7 h-7 object-contain"
+  />
               </motion.div>
               <div className="hidden sm:block">
                 <h1 className="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
