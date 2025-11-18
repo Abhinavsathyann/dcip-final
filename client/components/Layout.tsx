@@ -113,13 +113,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </nav>
 
             <div className="flex items-center gap-4">
-              <motion.button
-                className="hidden sm:block btn-glow text-sm font-semibold"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Apply Now
-              </motion.button>
+              
 
               {/* Mobile Menu Button */}
               <motion.button
