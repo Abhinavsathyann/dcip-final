@@ -36,6 +36,7 @@ export default function CollectorSection() {
         <h2 className="section-heading mb-12 text-center">Leadership & Coordination</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
           {/* District Collector Card */}
           <div
             className={`glass-effect p-8 rounded-2xl overflow-hidden transition-all duration-1000 hover:shadow-2xl hover:scale-105 border border-white/40 hover:border-primary/30 ${
@@ -129,6 +130,65 @@ export default function CollectorSection() {
               </div>
             </div>
           </div>
+
+
+
+
+  {/* Sub Collector Card */}
+          <div
+            className={`glass-effect p-8 rounded-2xl overflow-hidden transition-all duration-1000 hover:shadow-2xl hover:scale-105 border border-white/40 hover:border-secondary/30 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
+            style={{ transitionDelay: isVisible ? "200ms" : "0ms" }}
+          >
+            <div className="text-center">
+              <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden shadow-lg">
+                <img
+                  src="/Assets/images/dilipsir.jpg"
+                  alt="Sub Collector"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              <h3 className="text-2xl font-bold text-foreground mb-1">
+                Sub Collector
+              </h3>
+              <p className="text-primary font-semibold mb-1">
+                DILIP K KAINIKKARA IAS
+              </p>
+              <p className="text-muted-foreground mb-6">
+                 Tirur
+              </p>
+
+              <p className="text-foreground leading-relaxed mb-6 italic">
+                "Our goal is to bridge the gap between academic learning and
+                industry demands. Through DCIP, we provide hands-on training and
+                mentorship that prepare students for successful careers in
+                technology."
+              </p>
+
+              <div className="flex flex-col gap-3">
+                <a
+                  href="mailto:subc@dcip.org"
+                  className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg hover:bg-secondary/10 transition-colors text-secondary font-medium"
+                >
+                  <Mail size={18} />
+                  coordinator@dcip.org
+                </a>
+                <a
+                  href="tel:+919876543210"
+                  className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg hover:bg-secondary/10 transition-colors text-secondary font-medium"
+                >
+                  <Phone size={18} />
+                  +91 98765 43210
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+
+
              {/* District Collector Card */}
           <div
             className={`glass-effect p-8 rounded-2xl overflow-hidden transition-all duration-1000 hover:shadow-2xl hover:scale-105 border border-white/40 hover:border-primary/30 ${
