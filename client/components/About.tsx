@@ -195,11 +195,10 @@ export default function About() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div>
                 <h3 className="text-3xl font-bold text-foreground mb-4">
-                  Empowering the Next Generation of Public Service Leaders
+             Empowering the Next Generation of Public Service Leaders
                 </h3>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  The District Collector Internship Program (DCIP) provides
-                  real-time administrative experience to students.
+                  The District Collector Internship Program (DCIP) equips young talents with real-time exposure to district administration, governance processes, and public service initiatives enabling them to develop practical skills, leadership qualities, and a deeper understanding of how government systems function.
                 </p>
               </div>
 
