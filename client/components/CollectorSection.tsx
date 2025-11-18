@@ -134,7 +134,7 @@ export default function CollectorSection() {
 
 
 
-  {/* Sub Collector Card */}
+  {/* JRP Card */}
           <div
             className={`glass-effect p-8 rounded-2xl overflow-hidden transition-all duration-1000 hover:shadow-2xl hover:scale-105 border border-white/40 hover:border-secondary/30 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
@@ -173,14 +173,14 @@ export default function CollectorSection() {
                   className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg hover:bg-secondary/10 transition-colors text-secondary font-medium"
                 >
                   <Mail size={18} />
-                  coordinator@dcip.org
+              
                 </a>
                 <a
                   href="tel:+919876543210"
                   className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg hover:bg-secondary/10 transition-colors text-secondary font-medium"
                 >
                   <Phone size={18} />
-                  +91 98765 43210
+                  
                 </a>
               </div>
             </div>
