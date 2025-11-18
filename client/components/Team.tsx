@@ -16,7 +16,6 @@ interface BatchData {
   [key: number]: TeamMember[];
 }
 
-// ✅ Updated: Added Batches 1-4 with bulk entries, fixed duplicate IDs, cleaned filenames
 const teamData: BatchData = {
   1: [
     {
@@ -77,12 +76,14 @@ const teamData: BatchData = {
   2: [
     {
       id: 7,
-      name: "Ashley",  
+      name: "Ashley",
       college: "CHRIST (Deemed to be University), Bangalore ",
       course: "MAMCS Design Thinking and Content Strategy",
       photo: "Assets/images/Ashley.jpg",
-      linkedin: "https://www.linkedin.com/in/ashley-sunil-796728315?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-      instagram: "https://www.instagram.com/ashleyshangrila?igsh=OGdub3d6ODNhc3Rt",
+      linkedin:
+        "https://www.linkedin.com/in/ashley-sunil-796728315?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      instagram:
+        "https://www.instagram.com/ashleyshangrila?igsh=OGdub3d6ODNhc3Rt",
     },
     {
       id: 8,
@@ -279,7 +280,8 @@ const teamData: BatchData = {
       course: "MA Public Administration",
       photo: "Assets/images/Jumaila.jpg",
       linkedin: "https://in.linkedin.com/in/jumaila-fidha-6377b2291",
-      instagram: "https://www.instagram.com/jumaila_fidha?igsh=MWN1aGptYWJrenZzaw==",
+      instagram:
+        "https://www.instagram.com/jumaila_fidha?igsh=MWN1aGptYWJrenZzaw==",
     },
     {
       id: 29,
@@ -287,8 +289,10 @@ const teamData: BatchData = {
       college: "Lakshmibhai College, University of Delhi",
       course: "B.Com",
       photo: "Assets/images/Afrah.jpg",
-      linkedin: "https://in.linkedin.com/in/afrah-ibrahim-veloor-valappil-908446367",
-      instagram: "https://www.instagram.com/afraaah.ibrahim/?utm_source=ig_web_button_share_sheet",
+      linkedin:
+        "https://in.linkedin.com/in/afrah-ibrahim-veloor-valappil-908446367",
+      instagram:
+        "https://www.instagram.com/afraaah.ibrahim/?utm_source=ig_web_button_share_sheet",
     },
     {
       id: 30,
@@ -297,7 +301,8 @@ const teamData: BatchData = {
       course: "BA History",
       photo: "Assets/images/Vishnupriya.jpg",
       linkedin: "www.linkedin.com/in/vishnupriya-a-1160a1248",
-      instagram: "https://www.instagram.com/invites/contact/?igsh=k7ppl6enle6c&utm_content=5o180qz",
+      instagram:
+        "https://www.instagram.com/invites/contact/?igsh=k7ppl6enle6c&utm_content=5o180qz",
     },
     {
       id: 31,
@@ -306,7 +311,8 @@ const teamData: BatchData = {
       course: "MA Political Science",
       photo: "Assets/images/Hida.jpg",
       linkedin: "www.linkedin.com/in/ayisha-hida-o-067b64341",
-      instagram: "https://www.instagram.com/ayshaa_hida?igsh=MWppcXZudDdqaHRiaA==",
+      instagram:
+        "https://www.instagram.com/ayshaa_hida?igsh=MWppcXZudDdqaHRiaA==",
     },
     {
       id: 32,
@@ -332,8 +338,10 @@ const teamData: BatchData = {
       college: "Kerala Media Academy",
       course: "PG Diploma Journalism & Communication",
       photo: "Assets/images/Binisha.jpg",
-      linkedin: "https://www.linkedin.com/in/bini-binisha-0b16a82b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ",
-      instagram: "https://www.instagram.com/_bini_m?igsh=MTZjazJ2MWszeXp4OQ==",
+      linkedin:
+        "https://www.linkedin.com/in/bini-binisha-0b16a82b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ",
+      instagram:
+        "https://www.instagram.com/_bini_m?igsh=MTZjazJ2MWszeXp4OQ==",
     },
     {
       id: 35,
@@ -341,8 +349,10 @@ const teamData: BatchData = {
       college: "University of Delhi",
       course: "BA Political Science (Hons)",
       photo: "Assets/images/Devadathan.jpg",
-      linkedin: "https://www.linkedin.com/in/devadathan-p-k-857b77267?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-      instagram: "https://www.instagram.com/_dathanism_?igsh=MWQzZ3JzOWRreWR4cg==",
+      linkedin:
+        "https://www.linkedin.com/in/devadathan-p-k-857b77267?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      instagram:
+        "https://www.instagram.com/_dathanism_?igsh=MWQzZ3JzOWRreWR4cg==",
     },
     {
       id: 36,
@@ -351,7 +361,8 @@ const teamData: BatchData = {
       course: "Computer Engineering",
       photo: "Assets/images/Abhinav.jpg",
       linkedin: "www.linkedin.com/in/abhinavksathyan",
-      instagram: "https://www.instagram.com/abhinavvhh?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+      instagram:
+        "https://www.instagram.com/abhinavvhh?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
     },
   ],
 };
@@ -369,24 +380,18 @@ export default function Team() {
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.1 },
+      { threshold: 0.1 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
+    if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
   }, []);
 
-  const currentTeam = teamData[selectedBatch as keyof BatchData] || [];
+  const currentTeam = teamData[selectedBatch] || [];
 
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.1 },
-    },
+    visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
   };
 
   const itemVariants = {
@@ -404,7 +409,7 @@ export default function Team() {
       ref={sectionRef}
       className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-blue-50 to-white relative overflow-hidden"
     >
-      {/* Background elements */}
+      {/* Background blur */}
       <motion.div
         className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-primary/10 to-transparent rounded-full blur-3xl -z-10"
         animate={{ y: [0, 30, 0], x: [0, 20, 0] }}
@@ -424,17 +429,26 @@ export default function Team() {
             <div className="h-1 w-20 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
           </motion.div>
 
-          {/* Batch Selector */}
+          {/* BATCH SELECTOR - MOBILE SCROLLABLE */}
           <motion.div
             variants={itemVariants}
-            className="flex justify-center items-center mb-16"
+            className="flex justify-center mb-16"
           >
-            <div className="flex gap-4 items-center p-2 bg-white rounded-2xl shadow-lg border border-gray-100">
+            <div
+              className="
+                flex gap-3 items-center p-2 bg-white rounded-2xl shadow-lg border border-gray-100 
+                overflow-x-auto whitespace-nowrap no-scrollbar max-w-full
+              "
+            >
               {[1, 2, 3, 4, 5, 6].map((batch) => (
                 <motion.button
                   key={batch}
                   onClick={() => setSelectedBatch(batch)}
-                  className="relative px-6 py-3 rounded-xl font-bold text-lg transition-all duration-300 overflow-hidden group"
+                  className="
+                    relative px-4 py-2 rounded-xl font-semibold 
+                    text-sm md:text-lg transition-all duration-300 overflow-hidden group
+                    min-w-[100px] text-center
+                  "
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -451,27 +465,21 @@ export default function Team() {
                   )}
 
                   <span
-                    className={`relative z-10 flex items-center gap-2 ${
+                    className={`relative z-10 flex items-center justify-center gap-1 ${
                       selectedBatch === batch
                         ? "text-white"
                         : "text-foreground group-hover:text-primary"
                     }`}
                   >
-                    <motion.div
-                      animate={selectedBatch === batch ? { rotate: 360 } : { rotate: 0 }}
-                      transition={{ duration: 0.5 }}
-                      className="w-5 h-5 flex items-center justify-center font-bold"
-                    >
-                      {batch}
-                    </motion.div>
-                    Batch {batch}
+                    {batch}
+                    <span>Batch {batch}</span>
                   </span>
                 </motion.button>
               ))}
             </div>
           </motion.div>
 
-          {/* Team Grid */}
+          {/* TEAM GRID */}
           <AnimatePresence mode="wait">
             <motion.div
               key={selectedBatch}
@@ -490,22 +498,17 @@ export default function Team() {
                   whileHover={{ y: -10, transition: { duration: 0.2 } }}
                   className="group relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100"
                 >
-                  {/* Animated background gradient */}
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-                  {/* Card content */}
                   <div className="relative z-10 p-6 sm:p-8">
-                    {/* Avatar section */}
                     <motion.div
                       className="mb-6 flex justify-center"
                       whileHover={{ scale: 1.08 }}
                       transition={{ type: "spring", stiffness: 300 }}
                     >
                       <div className="relative">
-                        {/* Glow effect */}
                         <div className="absolute inset-0 bg-gradient-to-br from-primary/40 to-secondary/40 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -m-2"></div>
 
-                        {/* Avatar image */}
                         <img
                           src={member.photo}
                           alt={member.name}
@@ -513,7 +516,6 @@ export default function Team() {
                           className="relative w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg group-hover:shadow-xl transition-all duration-300"
                         />
 
-                        {/* Status badge */}
                         <motion.div
                           initial={{ scale: 0 }}
                           animate={{ scale: 1 }}
@@ -522,7 +524,6 @@ export default function Team() {
                       </div>
                     </motion.div>
 
-                    {/* Info section */}
                     <div className="text-center mb-4">
                       <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300 line-clamp-1">
                         {member.name}
@@ -535,35 +536,33 @@ export default function Team() {
                       </p>
                     </div>
 
-                    {/* Divider */}
                     <div className="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent mb-4"></div>
 
-                    {/* Social Links */}
                     <div className="flex items-center justify-center gap-3">
                       <motion.a
-                        href={member.linkedin || "#"}
+                        href={member.linkedin}
+                        target="_blank"
                         className="p-2 rounded-full bg-gray-100 hover:bg-primary hover:text-white transition-all duration-300"
                         whileHover={{ scale: 1.15, rotate: 5 }}
                         whileTap={{ scale: 0.9 }}
-                        title="LinkedIn"
                       >
                         <Linkedin size={18} />
                       </motion.a>
+
                       <motion.a
-                        href={member.instagram || "#"}
+                        href={member.instagram}
+                        target="_blank"
                         className="p-2 rounded-full bg-gray-100 hover:bg-secondary hover:text-white transition-all duration-300"
                         whileHover={{ scale: 1.15, rotate: -5 }}
                         whileTap={{ scale: 0.9 }}
-                        title="Instagram"
                       >
                         <Instagram size={18} />
                       </motion.a>
+
                       <motion.a
-                        // href={`mailto:${member.name.toLowerCase().replace(/\s+/g, ".")}@dcipmlpm@gmail.com`}
                         className="p-2 rounded-full bg-gray-100 hover:bg-accent hover:text-white transition-all duration-300"
                         whileHover={{ scale: 1.15 }}
                         whileTap={{ scale: 0.9 }}
-                        title="Email"
                       >
                         <Mail size={18} />
                       </motion.a>
