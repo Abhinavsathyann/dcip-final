@@ -77,12 +77,12 @@ const teamData: BatchData = {
   2: [
     {
       id: 7,
-      name: "Gokul P",
-      college: "Calicut University",
-      course: "BBA",
-      photo: "Assets/images/Gokul.jpg",
-      linkedin: "#",
-      instagram: "#",
+      name: "Ashley",  
+      college: "CHRIST (Deemed to be University), Bangalore ",
+      course: "MAMCS Design Thinking and Content Strategy",
+      photo: "Assets/images/Ashley.jpg",
+      linkedin: "https://www.linkedin.com/in/ashley-sunil-796728315?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      instagram: "https://www.instagram.com/ashleyshangrila?igsh=OGdub3d6ODNhc3Rt",
     },
     {
       id: 8,
@@ -189,9 +189,9 @@ const teamData: BatchData = {
   4: [
     {
       id: 19,
-      name: "Sajid M",
-      college: "Govt. Engineering College",
-      course: "B.Tech Civil",
+      name: "Rasim Abdul Musawir AT",
+      college: "Rajiv Gandhi national institute of youth development.",
+      course: "MA development studies ",
       photo: "Assets/images/Sajid.jpg",
       linkedin: "#",
       instagram: "#",
@@ -559,7 +559,7 @@ export default function Team() {
                         <Instagram size={18} />
                       </motion.a>
                       <motion.a
-                        href={`mailto:${member.name.toLowerCase().replace(/\s+/g, ".")}@dcip.edu`}
+                        // href={`mailto:${member.name.toLowerCase().replace(/\s+/g, ".")}@dcipmlpm@gmail.com`}
                         className="p-2 rounded-full bg-gray-100 hover:bg-accent hover:text-white transition-all duration-300"
                         whileHover={{ scale: 1.15 }}
                         whileTap={{ scale: 0.9 }}
