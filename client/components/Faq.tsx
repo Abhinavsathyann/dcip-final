@@ -12,49 +12,37 @@ const faqs: FAQItem[] = [
     id: 1,
     question: "Who is eligible to apply for DCIP?",
     answer:
-      "Students pursuing a degree in Computer Science, Information Technology, Electronics, or related fields from recognized institutions are eligible. Final year students are also welcome to apply. Basic programming knowledge is preferred but not mandatory.",
+      "Any UG or PG graduates who are 20 years of age or above are eligible.",
   },
   {
     id: 2,
     question: "What is the duration of the internship program?",
     answer:
-      "The DCIP program is typically 3-6 months long. The exact duration may vary based on the batch and individual arrangements. We offer both part-time and full-time options.",
+      "The duration is 3 months only.",
   },
   {
     id: 3,
     question: "Is the internship paid?",
     answer:
-      "Yes, interns receive a monthly stipend throughout the program. The amount varies based on performance and the specific role. Additionally, top performers receive bonus incentives.",
-  },
-  {
-    id: 4,
-    question: "What technologies are covered in the program?",
-    answer:
-      "We cover a wide range of technologies including Web Development (React, Node.js), Mobile Development (Flutter, React Native), Data Science, Cloud Computing (AWS, Azure), AI/ML, and IoT. The curriculum is updated regularly to match industry trends.",
-  },
-  {
-    id: 5,
-    question: "Do you provide placement assistance?",
-    answer:
-      "Yes, we have a dedicated placement cell that works with interns throughout their program. We have partnerships with leading tech companies and conduct regular placement drives. Our placement success rate is above 90%.",
+      "No, it is not a paid internship.",
   },
   {
     id: 6,
     question: "What is the application process?",
     answer:
-      "Applications are accepted through our online portal. You need to fill out the application form, submit your resume, and participate in a technical assessment and interview. Shortlisted candidates will be offered positions in the program.",
+      "Any UG or PG graduates aged 20 to 30 can apply. Applications open during the next batch intake through a Google Form. Shortlisted candidates will be called for an interview, and final selection will be made based on the interview.",
   },
   {
     id: 7,
     question: "Can I apply if I'm not from Malappuram?",
     answer:
-      "Yes, we accept applications from candidates across Kerala and India. We have flexibility with remote options and accommodations for out-station interns.",
+      "No, the internship is only open to candidates from Malappuram.",
   },
   {
     id: 8,
     question: "What makes DCIP different from other internship programs?",
     answer:
-      "DCIP offers industry mentorship, real-world projects, guaranteed stipend, strong placement support, and a community of like-minded professionals. Our curriculum is designed with input from leading tech companies and industry experts.",
+      "DCIP is different from other internship programs because it offers real, on-ground public administration experience. Interns get direct exposure to district-level operations, government processes, community projects, and field activities. The program focuses on practical learning, leadership development, and hands-on involvement rather than classroom-based training. This combination of real-world experience and community service makes DCIP Malappuram unique.",
   },
 ];
 
