@@ -350,8 +350,8 @@ const teamData: BatchData = {
       college: "KPTC",
       course: "Computer Engineering",
       photo: "Assets/images/Abhinav.jpg",
-      linkedin: "#",
-      instagram: "#",
+      linkedin: "www.linkedin.com/in/abhinavksathyan",
+      instagram: "https://www.instagram.com/abhinavvhh?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
     },
   ],
 };
