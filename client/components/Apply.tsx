@@ -256,7 +256,7 @@ export default function Apply() {
               </div>
 
               {/* CTA */}
-              <div className="bg-gray-50 p-6 rounded-xl text-center">
+              {/* <div className="bg-gray-50 p-6 rounded-xl text-center">
                 <p className="text-muted-foreground mb-4">
                   Check back soon for application opening or subscribe to our
                   newsletter
@@ -269,7 +269,7 @@ export default function Apply() {
                   />
                   <button className="btn-glow px-6">Notify Me</button>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
