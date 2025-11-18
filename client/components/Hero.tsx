@@ -22,17 +22,6 @@ export default function Hero() {
     },
   };
 
-  const floatingVariants = {
-    float: {
-      y: [0, -20, 0],
-      transition: {
-        duration: 3,
-        repeat: Infinity,
-        ease: "easeInOut",
-      },
-    },
-  };
-
   return (
     <section
       id="home"
@@ -40,7 +29,6 @@ export default function Hero() {
     >
       {/* Background with image + gradient overlay */}
       <div className="absolute inset-0 z-0">
-        {/* Background Image */}
         <motion.div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105 blur-[1px] brightness-[0.9]"
           style={{
@@ -51,7 +39,6 @@ export default function Hero() {
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         ></motion.div>
 
-        {/* Soft gradient overlay for readability */}
         <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-blue-50/70 to-purple-50/80 backdrop-blur-[2px]"></div>
 
         {/* Animated glowing shapes */}
@@ -61,29 +48,21 @@ export default function Hero() {
             animate={{ y: [0, 30, 0], x: [0, 20, 0] }}
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
           ></motion.div>
+
           <motion.div
             className="absolute -bottom-40 -right-40 w-80 h-80 bg-gradient-to-tl from-secondary/20 to-transparent rounded-full blur-3xl"
             animate={{ y: [0, -30, 0], x: [0, -20, 0] }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 1,
-            }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
           ></motion.div>
+
           <motion.div
             className="absolute top-1/2 left-1/3 w-96 h-96 bg-gradient-to-r from-accent/10 to-secondary/10 rounded-full blur-3xl"
             animate={{ y: [0, 20, 0], x: [0, -15, 0] }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 0.5,
-            }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
           ></motion.div>
         </div>
 
-        {/* Subtle tech grid overlay */}
+        {/* Tech Grid Overlay */}
         <div className="absolute inset-0 opacity-[0.05] bg-[linear-gradient(0deg,transparent_24%,rgba(59,130,246,.08)_25%,rgba(59,130,246,.08)_26%,transparent_27%,transparent_74%,rgba(59,130,246,.08)_75%,rgba(59,130,246,.08)_76%,transparent_77%,transparent),linear-gradient(90deg,transparent_24%,rgba(59,130,246,.08)_25%,rgba(59,130,246,.08)_26%,transparent_27%,transparent_74%,rgba(59,130,246,.08)_75%,rgba(59,130,246,.08)_76%,transparent_77%,transparent)] bg-[length:50px_50px]"></div>
       </div>
 
@@ -111,6 +90,7 @@ export default function Hero() {
           >
             DCIP
           </motion.span>
+
           <motion.span
             variants={itemVariants}
             className="text-4xl sm:text-5xl md:text-6xl block"
@@ -125,34 +105,8 @@ export default function Hero() {
           variants={itemVariants}
           className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed"
         >
-          Empowering change and fostering growth through hands-on government
-          projects
+          Empowering change and fostering growth through hands-on government projects
         </motion.p>
-
-        <motion.div
-          variants={itemVariants}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6"
-        >
-          <motion.button
-            className="btn-glow px-8 py-4 text-base font-semibold"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ type: "spring", stiffness: 400, damping: 10 }}
-          >
-            Explore Now
-          </motion.button>
-          <motion.button
-            className="px-8 py-4 rounded-lg font-semibold border-2 border-primary text-primary hover:bg-primary/5 transition-all duration-300"
-            whileHover={{
-              scale: 1.05,
-              backgroundColor: "rgba(59, 130, 246, 0.05)",
-            }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ type: "spring", stiffness: 400, damping: 10 }}
-          >
-            Learn More
-          </motion.button>
-        </motion.div>
       </motion.div>
 
       {/* Scroll Indicator */}
