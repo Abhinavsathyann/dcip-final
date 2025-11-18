@@ -206,8 +206,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             >
               <h3 className="text-lg font-bold mb-4">DCIP Malappuram</h3>
               <p className="text-gray-300 text-sm">
-                Digital Career Internship Program aimed at grooming young
-                talents in the district.
+                The District Collector Internship Program (DCIP) is a digital career initiative designed to groom young talents and equip them with real-world administrative and governance experience at the district level.
               </p>
             </motion.div>
 
