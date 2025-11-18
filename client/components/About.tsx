@@ -11,6 +11,61 @@ import {
 
 export default function About() {
   const sectionRef = useRef<HTMLElement>(null);
+  const cursorRef = useRef<HTMLDivElement>(null);
+
+  /* ==========================================
+        DEVICE CHECK → DESKTOP ONLY LOGIC
+     ========================================== */
+  const [isDesktop, setIsDesktop] = useState(true);
+
+  useEffect(() => {
+    const checkDevice = () => {
+      setIsDesktop(window.innerWidth >= 768); // md breakpoint
+    };
+
+    checkDevice();
+    window.addEventListener("resize", checkDevice);
+
+    return () => window.removeEventListener("resize", checkDevice);
+  }, []);
+
+  /* ==========================================
+        3D CURSOR ANIMATION (DESKTOP ONLY)
+     ========================================== */
+  useEffect(() => {
+    if (!isDesktop) return;
+
+    const cursor = cursorRef.current;
+    if (!cursor) return;
+
+    let mouseX = 0;
+    let mouseY = 0;
+    let currentX = 0;
+    let currentY = 0;
+    const speed = 0.15;
+
+    const handleMouseMove = (e: MouseEvent) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    };
+
+    const animate = () => {
+      currentX += (mouseX - currentX) * speed;
+      currentY += (mouseY - currentY) * speed;
+
+      cursor.style.transform = `translate3d(${currentX}px, ${currentY}px, 0)`;
+      requestAnimationFrame(animate);
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    animate();
+
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, [isDesktop]);
+
+  /* ==========================================
+                SCROLL APPEAR
+     ========================================== */
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -21,7 +76,7 @@ export default function About() {
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.1 },
+      { threshold: 0.1 }
     );
 
     if (sectionRef.current) observer.observe(sectionRef.current);
@@ -45,6 +100,9 @@ export default function About() {
     },
   };
 
+  /* ==========================================
+                 FEATURES
+     ========================================== */
   const features = [
     {
       icon: <BookOpen size={32} />,
@@ -119,7 +177,7 @@ export default function About() {
           initial="hidden"
           animate={isVisible ? "visible" : "hidden"}
         >
-          {/* Header */}
+          {/* HEADER */}
           <motion.div variants={itemVariants} className="text-center mb-6">
             <h2 className="section-heading mb-4">What is DCIP?</h2>
             <p className="section-subheading text-muted-foreground">
@@ -128,7 +186,7 @@ export default function About() {
             </p>
           </motion.div>
 
-          {/* Introduction Card */}
+          {/* INTRO CARD */}
           <motion.div
             variants={itemVariants}
             whileHover={{ scale: 1.02 }}
@@ -140,69 +198,33 @@ export default function About() {
                   Empowering the Next Generation of Public Service Leaders
                 </h3>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  The District Collector Internship Program (DCIP) is a
-                  groundbreaking government initiative designed to provide
-                  students with real-time, hands-on exposure to public
-                  administration and governance at the district level.
+                  The District Collector Internship Program (DCIP) provides
+                  real-time administrative experience to students.
                 </p>
-                <div className="flex flex-wrap gap-3">
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="btn-glow text-sm font-semibold"
-                  >
-                    Learn More
-                  </motion.button>
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="px-6 py-3 rounded-lg font-semibold border-2 border-primary text-primary hover:bg-primary/5 transition-all"
-                  >
-                    Get Involved
-                  </motion.button>
-                </div>
               </div>
 
-              {/* Illustration */}
-            <motion.div
-           animate={{ y: [0, 20, 0] }}
-           transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-           className="relative h-64 md:h-80 rounded-2xl  from-primary/20 via-accent/20 to-secondary/20 flex items-center justify-center overflow-hidden"
->
- 
-
-  {/* DCIP Logo instead of text */}
-  <img
-    src="Assets/images/dciplogo.png"  // <-- replace with your actual local file path
-    alt="DCIP Logo"
-    className="relative z-10 w-40 md:w-56 object-contain opacity-90 drop-shadow-lg"
-  />
-</motion.div>
-
+              {/* ILLUSTRATION */}
+              <motion.div
+                animate={{ y: [0, 20, 0] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                className="relative h-64 md:h-80 flex items-center justify-center overflow-hidden"
+              >
+                <img
+                  src="Assets/images/dciplogo.png"
+                  alt="DCIP Logo"
+                  className="relative z-10 w-40 md:w-56 object-contain opacity-90 drop-shadow-lg"
+                />
+              </motion.div>
             </div>
           </motion.div>
 
-          {/* ========================================================= */}
-          {/* ===== TEMPORARILY REMOVED: MISSION & VISION SECTION ===== */}
-          {/* ========================================================= */}
-
-          {/*
-          <motion.div
-            variants={containerVariants}
-            className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16"
-          >
-            Mission + Vision original section here…
-          </motion.div>
-          */}
-
-          {/* Key Features */}
+          {/* FEATURES */}
           <motion.div variants={itemVariants} className="mb-12">
             <h3 className="text-2xl md:text-3xl font-bold text-center mb-4 text-foreground">
               Why Choose DCIP?
             </h3>
             <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-              Unlock your potential through meaningful engagement with
-              governance and public service
+              Unlock your potential through hands-on governance and leadership
             </p>
 
             <motion.div
@@ -217,8 +239,6 @@ export default function About() {
                   transition={{ type: "spring", stiffness: 300 }}
                   className={`group relative overflow-hidden rounded-2xl ${feature.bgColor} p-8 border border-gray-200 hover:border-primary/30 shadow-md hover:shadow-xl transition-all duration-300`}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
                   <motion.div
                     className={`w-14 h-14 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center text-white mb-4 shadow-lg relative z-10`}
                     whileHover={{ rotate: 10, scale: 1.1 }}
@@ -244,49 +264,55 @@ export default function About() {
             </motion.div>
           </motion.div>
 
-          {/* Stats Section */}
-          <motion.div
-            variants={itemVariants}
-            className="mt-20 pt-12 border-t border-gray-200"
-          >
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {[
-                { value: "50+", label: "Interns Trained" },
-                { value: "6", label: "Active Batches" },
-                { value: "2+", label: "Years Strong" },
-              ].map((stat, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{
-                    delay: idx * 0.1,
-                    type: "spring",
-                    stiffness: 100,
-                  }}
-                  className="text-center"
-                >
-                  <motion.div
-                    animate={{ scale: [1, 1.15, 1] }}
-                    transition={{
-                      duration: 2,
-                      repeat: Infinity,
-                      delay: idx * 0.2,
-                    }}
-                    className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent mb-2"
-                  >
-                    {stat.value}
-                  </motion.div>
-                  <p className="text-sm md:text-base text-muted-foreground font-semibold">
-                    {stat.label}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+          {/* 4D DCIP MALAPPURAM TEXT — DESKTOP ONLY */}
+          {isDesktop && (
+            <motion.div
+              className="flex flex-col items-center justify-center py-20 select-none"
+              initial={{ opacity: 0, y: 40, filter: "blur(6px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
+            >
+              <motion.h1
+                className="relative text-5xl md:text-7xl font-extrabold text-center leading-tight"
+                animate={{ scale: [1, 1.03, 1] }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              >
+                <span className="absolute inset-0 text-black/20 translate-x-2 translate-y-2 blur-md">
+                  DCIP MALAPPURAM
+                </span>
 
+                <span className="absolute inset-0 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent blur-xl opacity-40">
+                  DCIP MALAPPURAM
+                </span>
+
+                <span className="relative bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent drop-shadow-2xl">
+                  DCIP MALAPPURAM
+                </span>
+              </motion.h1>
+
+              <motion.div
+                className="mt-4 h-1 w-32 bg-gradient-to-r from-primary via-secondary to-accent rounded-full shadow-lg"
+                animate={{ width: ["40%", "80%", "40%"] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              />
+            </motion.div>
+          )}
         </motion.div>
       </div>
+
+      {/* 3D CURSOR — ONLY ON DESKTOP */}
+      {isDesktop && (
+        <div
+          ref={cursorRef}
+          className="fixed top-0 left-0 w-10 h-10 rounded-full pointer-events-none z-[9999]
+          bg-gradient-to-br from-primary to-secondary opacity-70 blur-[2px]
+          mix-blend-screen transform -translate-x-1/2 -translate-y-1/2"
+        ></div>
+      )}
     </section>
   );
 }
