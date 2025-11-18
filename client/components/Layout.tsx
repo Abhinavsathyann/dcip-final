@@ -272,9 +272,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             >
               <h4 className="font-semibold mb-4">Contact</h4>
               <div className="space-y-2 text-sm text-gray-300">
-                <p>Email: info@dcip.org</p>
-                <p>Phone: +91 XXXXX XXXXX</p>
-                <p>Location: Malappuram, Kerala</p>
+                <p>Email: Dcipmlpm@gmail.com</p>
+
+                {/* <p>Phone: +91 XXXXX XXXXX</p>                      add phone number */}
+
+                <p>Location: Civil Station Malappuram, Kerala</p>
               </div>
             </motion.div>
 
@@ -296,7 +298,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   <Linkedin size={20} />
                 </motion.a>
                 <motion.a
-                  href="#"
+                  href="https://www.instagram.com/dcip_malappuram?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                   className="hover:text-primary transition-colors"
                   title="Instagram"
                   whileHover={{ scale: 1.2, rotate: -5 }}
@@ -305,7 +307,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   <Instagram size={20} />
                 </motion.a>
                 <motion.a
-                  href="#"
+                  href="mailto:Dcipmlpm@gmail.com"
                   className="hover:text-primary transition-colors"
                   title="Email"
                   whileHover={{ scale: 1.2 }}
