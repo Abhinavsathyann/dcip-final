@@ -25,23 +25,22 @@ export default function Apply() {
           </div>
 
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Ready to Transform Your Career?
+            Ready to Transform Your Journey?
           </h2>
 
           <p className="text-lg text-gray-200 max-w-2xl mx-auto mb-12">
-            Join thousands of interns who have successfully launched their tech
-            careers through DCIP Malappuram.
+            Join the growing community of interns who have gained valuable skills and real field experience through DCIP Malappuram.
           </p>
 
           <button
             onClick={() => setShowModal(true)}
             className="btn-glow px-10 py-4 text-lg font-bold shadow-2xl hover:shadow-primary/50 animate-pulse-glow"
           >
-            Apply Now
+              Check Eligibility
           </button>
 
           {/* Info cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
+          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
             <div className="glass-effect p-6 rounded-xl text-white">
               <Calendar size={32} className="text-yellow-300 mx-auto mb-4" />
               <h3 className="font-bold text-lg mb-2">Next Batch</h3>
@@ -59,7 +58,7 @@ export default function Apply() {
               <h3 className="font-bold text-lg mb-2">Success Rate</h3>
               <p className="text-gray-300 text-sm">95% Placement Rate</p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -100,7 +99,7 @@ export default function Apply() {
                   Coming Soon
                 </h3>
                 <p className="text-lg font-semibold text-primary mb-2">
-                  Expected Start Date: March 2024
+                  Expected Start Date: February 2025
                 </p>
                 <p className="text-muted-foreground">
                   Applications will open shortly. Be among the first to apply!
@@ -114,26 +113,50 @@ export default function Apply() {
                 </h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li className="flex items-start gap-3">
+
                     <span className="text-primary font-bold mt-1">✓</span>
                     <span>
-                      Currently pursuing or recently completed B.Tech/MCA in
-                      Computer Science, IT, or related fields
+                      Any UG or PG graduates from any recognized institution
                     </span>
                   </li>
+
                   <li className="flex items-start gap-3">
                     <span className="text-primary font-bold mt-1">✓</span>
                     <span>
-                      Basic knowledge of programming (C, C++, Java, or Python)
+                      Age group: 20 to 30 years 
                     </span>
                   </li>
+
                   <li className="flex items-start gap-3">
                     <span className="text-primary font-bold mt-1">✓</span>
-                    <span>Passionate about learning and self-improvement</span>
+                    <span>Basic social media handling skills</span>
                   </li>
+
                   <li className="flex items-start gap-3">
                     <span className="text-primary font-bold mt-1">✓</span>
-                    <span>Ability to commit 3-6 months to the program</span>
+                    <span>Good communication skills (Malayalam & English preferred)</span>
                   </li>
+
+                   <li className="flex items-start gap-3">
+                    <span className="text-primary font-bold mt-1">✓</span>
+                    <span>Leadership qualities and teamwork ability</span>
+                  </li>
+
+                   <li className="flex items-start gap-3">
+                    <span className="text-primary font-bold mt-1">✓</span>
+                    <span>Interest in public service and community-oriented activities</span>
+                  </li>
+                  
+                   <li className="flex items-start gap-3">
+                    <span className="text-primary font-bold mt-1">✓</span>
+                    <span>Willingness to participate in field work and administrative tasks</span>
+                  </li>
+
+                   <li className="flex items-start gap-3">
+                    <span className="text-primary font-bold mt-1">✓</span>
+                    <span>Ability to follow instructions and work responsibly under supervision</span>
+                  </li>
+                  
                 </ul>
               </div>
 
@@ -162,10 +185,10 @@ export default function Apply() {
                     </div>
                     <div>
                       <p className="font-semibold text-foreground">
-                        Technical Assessment
+                        Shortlisting
                       </p>
                       <p className="text-sm text-muted-foreground">
-                        Complete online coding assessment
+                        Shortlisting is done based on the applications received.
                       </p>
                     </div>
                   </div>
@@ -175,10 +198,10 @@ export default function Apply() {
                     </div>
                     <div>
                       <p className="font-semibold text-foreground">
-                        Technical Interview
+                        Interview
                       </p>
                       <p className="text-sm text-muted-foreground">
-                        Discussion on your technical knowledge
+                        Shortlisted candidates will be called for an interview.
                       </p>
                     </div>
                   </div>
@@ -188,10 +211,11 @@ export default function Apply() {
                     </div>
                     <div>
                       <p className="font-semibold text-foreground">
-                        HR Interview
+                       Announcement
+
                       </p>
                       <p className="text-sm text-muted-foreground">
-                        Final round with HR team
+                        Final results will be announced, and selected candidates will receive an email and a confirmation call. 
                       </p>
                     </div>
                   </div>
