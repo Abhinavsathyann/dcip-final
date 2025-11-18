@@ -164,16 +164,21 @@ export default function About() {
               </div>
 
               {/* Illustration */}
-              <motion.div
-                animate={{ y: [0, 20, 0] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                className="relative h-64 md:h-80 rounded-2xl bg-gradient-to-br from-primary/20 via-accent/20 to-secondary/20 flex items-center justify-center overflow-hidden"
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 opacity-50"></div>
-                <div className="relative z-10 text-6xl md:text-8xl font-bold text-primary/20">
-                  DCIP
-                </div>
-              </motion.div>
+            <motion.div
+           animate={{ y: [0, 20, 0] }}
+           transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+           className="relative h-64 md:h-80 rounded-2xl  from-primary/20 via-accent/20 to-secondary/20 flex items-center justify-center overflow-hidden"
+>
+ 
+
+  {/* DCIP Logo instead of text */}
+  <img
+    src="Assets/images/dciplogo.png"  // <-- replace with your actual local file path
+    alt="DCIP Logo"
+    className="relative z-10 w-40 md:w-56 object-contain opacity-90 drop-shadow-lg"
+  />
+</motion.div>
+
             </div>
           </motion.div>
 
