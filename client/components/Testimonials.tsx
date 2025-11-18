@@ -1,3 +1,4 @@
+// Updated Testimonials component with company and role removed
 import { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 
@@ -5,8 +6,6 @@ interface Testimonial {
   id: number;
   name: string;
   batch: string;
-  company: string;
-  role: string;
   message: string;
   rating: number;
   photo?: string;
@@ -15,54 +14,44 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Arun Kumar",
-    batch: "Batch 1",
-    company: "TCS",
-    role: "Software Engineer",
+    name: "ANUSHA K P",
+    batch: "Batch 5",
     message:
-      "DCIP transformed my career completely. The mentorship and real-world project experience helped me secure a role at TCS. Highly recommended!",
+      "Being a DCIP intern was a transformational experience. It gave me real exposure to leadership, decision-making, and public service. Working with the District Collector and officials showed me how vision and commitment create real impact. This internship has inspired me to stay connected with public service and aim for meaningful change",
     rating: 5,
   },
   {
     id: 2,
-    name: "Priya Sharma",
-    batch: "Batch 2",
-    company: "Infosys",
-    role: "Full Stack Developer",
+    name: "MUHAMMED NISAR K",
+    batch: "Batch 5",
     message:
-      "The program's curriculum was perfectly aligned with industry needs. I gained confidence and practical skills that directly helped in my placement.",
+      "Being part of the District Collector's Internship Programme gave me real exposure to how administration and society work together. It strengthened my communication, reporting, teamwork, and leadership skills while deepening my understanding of governance and public service.",
     rating: 5,
   },
   {
     id: 3,
-    name: "Rajesh P",
-    batch: "Batch 1",
-    company: "Accenture",
-    role: "Junior Developer",
+    name: "SHIYAS AHAMMED",
+    batch: "Batch 5",
     message:
-      "Excellent mentorship and supportive community. The hands-on projects gave me real experience that made me stand out in interviews.",
+      "Being part of the District Collector’s Internship Programme was a valuable experience. It helped me understand government systems, data-driven decision-making, and digital initiatives. The internship strengthened my teamwork, social responsibility, and inspired me to use technology for positive change.",
     rating: 5,
   },
-  {
-    id: 4,
-    name: "Deepa M",
-    batch: "Batch 3",
-    company: "Cognizant",
-    role: "Associate Consultant",
-    message:
-      "DCIP is not just a training program; it's a career catalyst. The placement support and industry connections are invaluable.",
-    rating: 5,
-  },
-  {
-    id: 5,
-    name: "Vikram S",
-    batch: "Batch 2",
-    company: "Wipro",
-    role: "Software Developer",
-    message:
-      "Outstanding program! The trainers are experienced professionals who really care about student success. Definitely worth it!",
-    rating: 5,
-  },
+  // {
+  //   id: 4,
+  //   name: "Deepa M",
+  //   batch: "Batch 3",
+  //   message:
+  //     "DCIP is not just training; it's a transformation. The exposure and discipline I gained are invaluable.",
+  //   rating: 5,
+  // },
+  // {
+  //   id: 5,
+  //   name: "Vikram S",
+  //   batch: "Batch 2",
+  //   message:
+  //     "Wonderful program! The guidance and field activities helped me develop leadership and teamwork skills.",
+  //   rating: 5,
+  // },
 ];
 
 export default function Testimonials() {
@@ -80,7 +69,7 @@ export default function Testimonials() {
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.1 },
+      { threshold: 0.1 }
     );
 
     if (sectionRef.current) {
@@ -103,7 +92,7 @@ export default function Testimonials() {
   const handlePrev = () => {
     setAutoPlay(false);
     setCurrentIndex(
-      (prev) => (prev - 1 + testimonials.length) % testimonials.length,
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length
     );
   };
 
@@ -129,7 +118,6 @@ export default function Testimonials() {
       ref={sectionRef}
       className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden"
     >
-      {/* Background decoration */}
       <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-bl from-primary/5 to-transparent rounded-full blur-3xl -z-10"></div>
       <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-tr from-secondary/5 to-transparent rounded-full blur-3xl -z-10"></div>
 
@@ -141,10 +129,9 @@ export default function Testimonials() {
         >
           <h2 className="section-heading mb-3">Success Stories</h2>
           <p className="section-subheading mb-16">
-            Hear from our successful interns and their career journeys
+            Hear from our interns and their transformation journeys
           </p>
 
-          {/* Testimonials Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             {visibleTestimonials.map((testimonial, index) => (
               <div
@@ -154,11 +141,8 @@ export default function Testimonials() {
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-10"
                 }`}
-                style={{
-                  transitionDelay: isVisible ? `${index * 100}ms` : "0ms",
-                }}
+                style={{ transitionDelay: isVisible ? `${index * 100}ms` : "0ms" }}
               >
-                {/* Rating */}
                 <div className="flex gap-1 mb-4">
                   {Array.from({ length: testimonial.rating }).map((_, i) => (
                     <Star
@@ -169,12 +153,10 @@ export default function Testimonials() {
                   ))}
                 </div>
 
-                {/* Message */}
                 <p className="text-foreground mb-6 leading-relaxed italic">
                   "{testimonial.message}"
                 </p>
 
-                {/* Avatar & Info */}
                 <div className="flex items-center gap-4 pt-4 border-t border-white/20">
                   <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-white font-bold text-sm">
@@ -188,9 +170,6 @@ export default function Testimonials() {
                     <h4 className="font-semibold text-foreground">
                       {testimonial.name}
                     </h4>
-                    <p className="text-xs text-muted-foreground">
-                      {testimonial.role} @ {testimonial.company}
-                    </p>
                     <p className="text-xs text-primary font-medium">
                       {testimonial.batch}
                     </p>
@@ -200,7 +179,6 @@ export default function Testimonials() {
             ))}
           </div>
 
-          {/* Navigation Controls */}
           <div className="flex items-center justify-between gap-6 flex-wrap">
             <div className="flex gap-4 order-2 sm:order-1">
               <button
@@ -219,7 +197,6 @@ export default function Testimonials() {
               </button>
             </div>
 
-            {/* Dots */}
             <div className="flex gap-2 order-1 sm:order-2">
               {testimonials.map((_, index) => (
                 <button
@@ -235,7 +212,6 @@ export default function Testimonials() {
               ))}
             </div>
 
-            {/* Counter */}
             <div className="text-sm text-muted-foreground order-3 sm:order-3 w-full sm:w-auto text-center sm:text-right">
               {currentIndex + 1} / {testimonials.length}
             </div>
