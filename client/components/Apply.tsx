@@ -230,27 +230,27 @@ export default function Apply() {
                 <div className="grid grid-cols-2 gap-3 text-sm">
                   <div className="flex items-center gap-2">
                     <span className="text-primary">•</span>
-                    <span>Monthly Stipend</span>
+                    <span>Real Field Experience</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="text-primary">•</span>
-                    <span>Industry Mentorship</span>
+                    <span>Administrative Exposure</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="text-primary">•</span>
-                    <span>Real-World Projects</span>
+                    <span>Communication & Leadership Development</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="text-primary">•</span>
-                    <span>Placement Assistance</span>
+                    <span>Professional Networking</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="text-primary">•</span>
-                    <span>Certificate of Completion</span>
+                    <span>Social Media & Documentation Skills</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="text-primary">•</span>
-                    <span>Networking Opportunities</span>
+                    <span>Personal Growth & Discipline</span>
                   </div>
                 </div>
               </div>
