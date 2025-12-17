@@ -191,7 +191,7 @@ export default function Testimonials() {
               ></button>
             ))}
           </div>
-
+3
           {/* Slide Number */}
           <div className="text-sm text-muted-foreground order-3 w-full sm:w-auto text-center sm:text-right">
             {currentIndex + 1} / {testimonials.length}
