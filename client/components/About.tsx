@@ -139,7 +139,7 @@ export default function About() {
     {
       icon: <Award size={32} />,
       title: "Career Growth",
-      description: "Get recognized certificates.",
+      description: "Get recognized certificates..",
       color: "from-orange-500 to-orange-600",
       bgColor: "bg-orange-50",
     },
