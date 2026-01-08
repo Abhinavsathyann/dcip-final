@@ -5,11 +5,11 @@ import Hero from "../components/Hero";
 import About from "../components/About";
 import Timeline from "../components/Timeline";
 import Team from "../components/Team";
-// import Leadership from "../components/Leadership";
-import CitizenServices from "../components/CitizenServices";
+// import Leadership from "../components/Leadership";  ()
+// import CitizenServices from "../components/CitizenServices";  ()
 import TemporaryAccess from "../components/TemporaryAccess";
 import Testimonials from "../components/Testimonials";
-import DcipAiChatbot from "../components/DcipAiChatbot";
+// import DcipAiChatbot from "../components/DcipAiChatbot";   ()
 
 // Lazy load non-critical components
 const CollectorSection = lazy(() => import("../components/CollectorSection"));
@@ -66,8 +66,8 @@ export default function Index() {
       <Timeline />
       <Team />
       {/* <Leadership /> */}
-      <CitizenServices />
-      <DcipAiChatbot />
+      {/* <CitizenServices /> */}
+      {/* <DcipAiChatbot /> */}
       <Suspense fallback={<SectionLoader />}>
         <CollectorSection />
       </Suspense>
